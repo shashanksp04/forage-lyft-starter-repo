@@ -1,5 +1,6 @@
+from abc import ABC
 
-class Battery():
+class Battery(ABC):
     
     def __init__(self):
         pass

@@ -1,8 +1,9 @@
+from abc import ABC
 
-class Engine():
+class Engine(ABC):
     
     def __init__(self):
-        pass  
+        pass 
 
     def need_service(self) -> bool:
         pass
