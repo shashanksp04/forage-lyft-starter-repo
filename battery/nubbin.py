@@ -1,7 +1,7 @@
-from battery import Battery
+from battery.battery import Battery
 
 
-class NubbinBatter(Battery):
+class NubbinBattery(Battery):
     
     def __init__(self,last_service_date, current_date):
         super().__init()

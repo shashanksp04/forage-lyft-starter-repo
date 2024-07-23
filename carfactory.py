@@ -1,9 +1,15 @@
 
 from car import Car
 
-from engine import CapuletEngine, SternmanEngine, WilloughbyEngine
+from engine.capulet_engine import CapuletEngine
+from engine.willoughby_engine import WilloughbyEngine
+from engine.sternman_engine import SternmanEngine 
 
-from battery import SplinderBattery, NubbinBattery
+from battery.splinder import SplinderBattery
+from battery.nubbin import NubbinBattery
+
+from tire.carrigan import Carrigan
+from tire.octoprime import Octoprime
 
 from datetime import date
 
@@ -12,7 +18,7 @@ class Carfactory():
     def __init__(self):
         pass
     
-    def create_calliope(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
+    def create_calliope(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int,) -> Car:
         return Car(CapuletEngine(current_mileage,last_service_mileage),SplinderBattery(last_service_date,current_date))
     
     def create_glissade(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:

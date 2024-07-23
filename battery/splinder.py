@@ -1,7 +1,7 @@
-from battery import battery
+from battery.battery import Battery
 
 
-class SplinderBatter(battery):
+class SplinderBattery(Battery):
     
     def __init__(self,last_service_date, current_date):
         super().__init()
@@ -9,4 +9,4 @@ class SplinderBatter(battery):
         self.current_date = current_date
 
     def needs_service(self) -> bool:
-        return self.current_date - self.last_service_date > 2
+        return self.current_date - self.last_service_date > 3
