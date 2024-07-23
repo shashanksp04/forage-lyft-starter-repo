@@ -9,4 +9,4 @@ class Octoprime(Tire):
         sum = 0
         for num in self.tire_array:
             sum += num
-        return sum >= 3
+        return sum >= 3.0
